@@ -1,0 +1,18 @@
+<div class="container" id="produtos">
+  <div class="row">
+  {{#each produto}}
+  <div class="col-sm-4">
+    <h1>{{nome}}</h1>
+    <h2>{{preco}}€</h2>
+    <h2>{{descricao}}</h2>
+  <form action="/pay" method="post">
+  <input type="hidden" value="{{_id}}"  name="id"><br>
+  <button type="submit" class="btn btn-primary">Buy now with Paypal!</button>
+  </form>
+  <form action="/wepay" method="post">
+  <input type="hidden" value="{{_id}}"  name="id"><br>
+  <button type="submit" class="btn btn-success">Buy now with WePay!</button>
+  </form>
+  </div>
+  {{/each}}
+</div>

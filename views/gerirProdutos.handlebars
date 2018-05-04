@@ -1,0 +1,47 @@
+<div id="gerirProdutos">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each produto}}
+      <tr>
+        <td>{{nome}}</td>
+        <td>{{preco}}</td>
+        <td>{{descricao}}</td>
+        <td>
+            <button id="{{_id}}">X</button>
+        </td>
+      </tr>
+       {{/each}}
+    </tbody>
+  </table>
+</div>
+
+ <script>
+   $("button").click(function() {
+    $.ajax({
+                async: true,
+                crossDomain: true,
+                dataType: "json",
+                url: "http://localhost:3000/removerProduto/"+this.id,
+                method: "DELETE",
+                headers: {
+                    "Cache-Control": "no-cache",
+                    "Access-Control-Allow-Origin": "*"
+                },
+                success: function(data){
+                  window.location.href("http://localhost:3000/gerirProdutos");
+               },
+                error: function(err){
+                    console.log(err);
+                }
+                }
+            )
+});
+    </script>
