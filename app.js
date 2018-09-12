@@ -26,15 +26,15 @@ db.once("open", function callback(){
 //Configuração das credênciais do paypal
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'ARzlozAfw1m4hLw5YpYZMgoIQrWDA01oqgzhNOFGJXd0qr1nktqEEPF1yd85ivKYGTD34wxDoE3ugaao',
-    'client_secret': 'ED6MtdRBLqYlJXvlqFCRY8LUxwn_ZET9HztqIAuKg5qO6gJBt9YHXn72CdMoG_RTN8JPDPafT8Q-4fwn'
+    'client_id': 'Your client ID',
+    'client_secret': 'Your client secret'
   });
 
 //Configuração das credênciais do wepay
 var wepay_settings = {
-	'client_id'     : '16430',
-	'client_secret' : '8326287921',
-	'access_token'  : 'STAGE_dd96a62685630f47461be07cf511c79f3e216492c5b22dcab4e41e6972a991f6', // used for oAuth2
+	'client_id'     : 'Your client ID',
+	'client_secret' : 'Your client secret',
+	'access_token'  : 'Your access token', // used for oAuth2
 	// 'api_version': 'API_VERSION'
 }
 
